@@ -1,6 +1,7 @@
 FROM scratch
 
 ADD openEuler-23.09-docker-rootfs.aarch64.tar.xz /
+RUN sed -i "s@repo.openeuler.org@repo.huaweicloud.com/openeuler@g" /etc/yum.repos.d/openEuler.repo
 # See more in https://gitee.com/openeuler/cloudnative/issues/I482Q6
 RUN ln -sf /usr/share/zoneinfo/UTC /etc/localtime && \
     sed -i "s/TMOUT=300/TMOUT=0/g" /etc/bashrc && \

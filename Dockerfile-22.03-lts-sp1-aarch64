@@ -1,6 +1,7 @@
 FROM scratch
 
 ADD openEuler-22.03-lts-sp1-docker-rootfs.aarch64.tar.xz /
+https://github.com/openhpc/ohpc/blob/15dab81c0d831e768c50d9e5e1e7d98ea202057b/.github/workflows/validate.yml#L142C12-L142C106
 # See more in https://gitee.com/openeuler/cloudnative/issues/I482Q6
 RUN ln -sf /usr/share/zoneinfo/UTC /etc/localtime && \
     sed -i "s/TMOUT=300/TMOUT=0/g" /etc/bashrc && \
